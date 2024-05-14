@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2 {
+            color: red;
+            font-size: 32px;
+        }
+
+        h4 {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            <h2>Página principal</h2>
+        </span>
+        <marquee behavior="" direction="">
+            <h4>Seja bem vindo, {{.Nome}}</h4>
+            <br>
+            <h4>{{ .Email}}</h4>
+        </marquee>
+        <button id="botao">Clique em mim</button>
+    </div>
+    <script>
+        var botao = document.getElementById("botao")
+        botao.onclick = function() {
+            alert("Botão clicado com sucesso")
+        }
+    </script>
+</body>
+</html>
